@@ -23,7 +23,10 @@ from haystack.utils import get_identifier, get_model_ct
 from haystack.utils import log as logging
 from haystack.utils.app_loading import haystack_get_model
 
+
+import opensearechpy as elasticsearch
 from opensearchpy.helpers import bulk
+
 
 
 
