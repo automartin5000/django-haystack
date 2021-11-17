@@ -13,18 +13,9 @@ from haystack.constants import DEFAULT_OPERATOR, DJANGO_CT, DJANGO_ID, FUZZINESS
 from haystack.exceptions import MissingDependency
 from haystack.utils import get_identifier, get_model_ct
 
-try:
-    import elasticsearch
 
-    if not ((7, 0, 0) <= elasticsearch.__version__ < (8, 0, 0)):
-        raise ImportError
-    from elasticsearch.helpers import bulk, scan
-except ImportError:
-    raise MissingDependency(
-        "The 'elasticsearch7' backend requires the \
-                            installation of 'elasticsearch>=7.0.0,<8.0.0'. \
-                            Please refer to the documentation."
-    )
+import opensearchpy as elasticsearch
+from opensearchpy.helpers import bulk, scan
 
 
 DEFAULT_FIELD_MAPPING = {
