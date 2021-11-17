@@ -24,7 +24,7 @@ from haystack.utils import log as logging
 from haystack.utils.app_loading import haystack_get_model
 
 
-import opensearechpy as elasticsearch
+import opensearchpy as elasticsearch
 from opensearchpy.helpers import bulk
 
 
