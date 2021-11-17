@@ -24,7 +24,6 @@ from haystack.utils import log as logging
 from haystack.utils.app_loading import haystack_get_model
 
 from opensearchpy.helpers import bulk
-from opensearchpy.helpers import bulk_index as bulk
 
 
 
